@@ -1,0 +1,38 @@
+server:
+  port: 9000
+
+
+#Swagger Api v3
+
+springdoc:
+  api-docs:
+    path: /swagger-ui.html
+
+#Hibernate orm
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+      
+#mysql configuration
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/stocks
+    
+    username: root
+    
+    password: root
+
+
+#Acutators
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+      base-path: /stock
+  endpoint:
+    shutdown:
+      enabled: true

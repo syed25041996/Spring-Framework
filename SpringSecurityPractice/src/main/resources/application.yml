@@ -1,0 +1,29 @@
+server:
+  port: 9000
+spring:
+  security:
+    user:
+      name: syed
+      password: syed
+ 
+  datasource:
+    url: jdbc:mysql://localhost:3306/secureusers
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update 
+    
+    
+     ######h2 configuatrion######
+#    password: 
+#    url: jdbc:h2:mem:testdb
+#    driver-class-name: org.h2.Driver
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
